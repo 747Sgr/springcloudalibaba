@@ -1,0 +1,16 @@
+
+server:
+  port: 8871
+
+spring:
+  application:
+    name: user-service
+  cloud:
+    nacos:
+      #声明注册中心的地址
+      server-addr: localhost:8848
+      discovery:
+#       向注册中心注册地址
+        server-addr: ${spring.cloud.nacos.server-addr}
+
+

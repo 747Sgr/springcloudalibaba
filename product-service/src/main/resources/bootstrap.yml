@@ -1,0 +1,21 @@
+
+spring:
+  application:
+    name: product-service
+#读取指定环境的配置文件
+#  profiles:
+#    active: dev
+  cloud:
+    nacos:
+#声明配置中心地址
+      server-addr: localhost:8848
+      config:
+#读取指定命名空间的文件
+        namespace: c114afdf-ab47-4945-bb24-42e043afe38e
+#指定读取文件的后缀名
+        file-extension: properties
+#指定读取配置文件的地址
+        server-addr: ${spring.cloud.nacos.server-addr}
+#指定读取配置文件的分组
+        group: DEFAULT_GROUP
+
