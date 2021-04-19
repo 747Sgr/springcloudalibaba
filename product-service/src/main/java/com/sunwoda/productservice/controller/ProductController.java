@@ -22,7 +22,7 @@ public class ProductController {
 
     @GetMapping("/getName")
     public String getName() {
-
+        System.out.println("name");
         return name;
     }
 }
